@@ -1,0 +1,350 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+GSSContext (JSch API)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="GSSContext (JSch API)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../com/jcraft/jsch/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/GSSContext.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../com/jcraft/jsch/ForwardedTCPIPDaemon.html" title="interface in com.jcraft.jsch"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../com/jcraft/jsch/HASH.html" title="interface in com.jcraft.jsch"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?com/jcraft/jsch/GSSContext.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="GSSContext.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.jcraft.jsch</FONT>
+<BR>
+Interface GSSContext</H2>
+<HR>
+<DL>
+<DT><PRE>public interface <B>GSSContext</B></DL>
+</PRE>
+
+<P>
+Usually not to be used by applications.
+<p>
+ Encapsulates a GSS context, i.e. an implementation of the
+ GSS API. This is used by <A HREF="../../../com/jcraft/jsch/UserAuthGSSAPIWithMIC.html" title="class in com.jcraft.jsch"><CODE>UserAuthGSSAPIWithMIC</CODE></A> to do the
+ actual cryptographic work. (See this class for a description on how this
+ interface is used.)
+</p>
+<p>
+ This interface only contains the methods needed for GSS-API authentication,
+ not the full GSS API.
+</p>
+<p>
+ An implementation of this interface is included in the JSch library,
+  based on the <A HREF="http://download.oracle.com/javase/6/docs/api/org/ietf/jgss/package-summary.html?is-external=true">GSS API</A> included in the
+  Java SE from 1.4 on, using object ID <code>1.2.840.113554.1.2.2</code>, i.e.
+  Kerberos v5 as defined in RFC 1964.
+</p>
+<P>
+
+<P>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="http://download.oracle.com/javase/6/docs/api/org/ietf/jgss/GSSContext.html?is-external=true" title="class or interface in org.ietf.jgss"><CODE>GSSContext</CODE></A>, 
+<a href="http://tools.ietf.org/html/rfc2743">RFC 2743,
+    Generic Security Service Application Program Interface
+    Version 2, Update 1</a>, 
+<a href="http://tools.ietf.org/html/rfc5653">RFC 5653: Generic Security Service API Version 2: Java Bindings Update</a>, 
+<a href="http://tools.ietf.org/html/rfc4462">RFC 4462:
+     Generic Security Service Application Program Interface (GSS-API)
+  Authentication and Key Exchange for the Secure Shell (SSH) Protocol</a>, 
+<a href="http://tools.ietf.org/html/rfc1964">RFC 1964,
+    The Kerberos Version 5 GSS-API Mechanism</a></DL>
+<HR>
+
+<P>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/jcraft/jsch/GSSContext.html#create(java.lang.String, java.lang.String)">create</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;user,
+       <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;host)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;creates the context.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/jcraft/jsch/GSSContext.html#dispose()">dispose</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disposes this context, releasing any system resources
+ and stored cryptographic information.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/jcraft/jsch/GSSContext.html#getMIC(byte[], int, int)">getMIC</A></B>(byte[]&nbsp;message,
+       int&nbsp;s,
+       int&nbsp;l)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;calculates a Message Integrity Code for a message.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/jcraft/jsch/GSSContext.html#init(byte[], int, int)">init</A></B>(byte[]&nbsp;token,
+     int&nbsp;s,
+     int&nbsp;l)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tries to establish the secure context by processing a token
+ from the server and (maybe) creating a new token to send to
+ the server.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/jcraft/jsch/GSSContext.html#isEstablished()">isEstablished</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checks is the context establishing already succeeded.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="create(java.lang.String, java.lang.String)"><!-- --></A><H3>
+create</H3>
+<PRE>
+void <B>create</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;user,
+            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</A>&nbsp;host)
+            throws <A HREF="../../../com/jcraft/jsch/JSchException.html" title="class in com.jcraft.jsch">JSchException</A></PRE>
+<DL>
+<DD>creates the context.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>user</CODE> - the user name.<DD><CODE>host</CODE> - the server's name.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../com/jcraft/jsch/JSchException.html" title="class in com.jcraft.jsch">JSchException</A></CODE><DT><B>See Also:</B><DD><A HREF="http://download.oracle.com/javase/6/docs/api/org/ietf/jgss/GSSManager.html?is-external=true#createContext" title="class or interface in org.ietf.jgss"><CODE>GSSManager</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isEstablished()"><!-- --></A><H3>
+isEstablished</H3>
+<PRE>
+boolean <B>isEstablished</B>()</PRE>
+<DL>
+<DD>Checks is the context establishing already succeeded.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="init(byte[], int, int)"><!-- --></A><H3>
+init</H3>
+<PRE>
+byte[] <B>init</B>(byte[]&nbsp;token,
+            int&nbsp;s,
+            int&nbsp;l)
+            throws <A HREF="../../../com/jcraft/jsch/JSchException.html" title="class in com.jcraft.jsch">JSchException</A></PRE>
+<DL>
+<DD>Tries to establish the secure context by processing a token
+ from the server and (maybe) creating a new token to send to
+ the server.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>token</CODE> - an array containing the token received from the server.
+    At the start, this will be an empty array.<DD><CODE>s</CODE> - the index in <code>token</code> where the token actually starts.<DD><CODE>l</CODE> - the length of the token.
+<DT><B>Returns:</B><DD>the token to be sent to the server (if length > 0).
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../com/jcraft/jsch/JSchException.html" title="class in com.jcraft.jsch">JSchException</A></CODE><DT><B>See Also:</B><DD><A HREF="http://download.oracle.com/javase/6/docs/api/org/ietf/jgss/GSSContext.html?is-external=true#initSecContext" title="class or interface in org.ietf.jgss"><CODE>GSSContext</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getMIC(byte[], int, int)"><!-- --></A><H3>
+getMIC</H3>
+<PRE>
+byte[] <B>getMIC</B>(byte[]&nbsp;message,
+              int&nbsp;s,
+              int&nbsp;l)</PRE>
+<DL>
+<DD>calculates a Message Integrity Code for a message.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>message</CODE> - an array containing the message for which the
+    the code should be calculated.<DD><CODE>s</CODE> - the index in <code>message</code> where the message actually
+    starts<DD><CODE>l</CODE> - the length of the message.
+<DT><B>Returns:</B><DD>a token containing the MIC for the message.<DT><B>See Also:</B><DD><A HREF="http://download.oracle.com/javase/6/docs/api/org/ietf/jgss/GSSContext.html?is-external=true#getMic" title="class or interface in org.ietf.jgss"><CODE>GSSContext</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="dispose()"><!-- --></A><H3>
+dispose</H3>
+<PRE>
+void <B>dispose</B>()</PRE>
+<DL>
+<DD>Disposes this context, releasing any system resources
+ and stored cryptographic information. The context can't be used
+ after this call.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../com/jcraft/jsch/package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/GSSContext.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../com/jcraft/jsch/ForwardedTCPIPDaemon.html" title="interface in com.jcraft.jsch"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../com/jcraft/jsch/HASH.html" title="interface in com.jcraft.jsch"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?com/jcraft/jsch/GSSContext.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="GSSContext.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+This is an inofficial Javadoc created by Paŭlo Ebermann.
+        Have a look at the <a href="http://www.jcraft.com/jsch/">official homepage</a>.
+      
+</BODY>
+</HTML>

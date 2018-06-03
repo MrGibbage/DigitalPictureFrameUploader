@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+	<EditTextPreference
+	    android:key="host"
+	    android:dialogMessage="Enter the SSH server address. Do not include the port. This setting should not start with any protocol such as http or https."
+	    android:dialogTitle="SSH Server Address"
+	    android:title="SSH server address"
+	    />
+
+    <EditTextPreference
+        android:key="port"
+        android:dialogMessage="Enter the SSH server address port. Do not include the port."
+        android:dialogTitle="SSH Server Port"
+        android:title="SSH server port"
+        android:defaultValue="22"
+        android:numeric="integer"
+        />
+
+	<EditTextPreference
+        android:key="user"
+        android:dialogMessage="Enter the SSH server username"
+        android:dialogTitle="SSH Server Username"
+        android:title="SSH server username"
+        />
+
+	<EditTextPreference
+        android:key="pass"
+        android:dialogMessage="Enter the SSH server password"
+        android:dialogTitle="SSH Server Password"
+        android:title="SSH server password"
+        />
+
+    <EditTextPreference
+        android:key="remote_folder"
+        android:dialogMessage="Enter the SSH server remote folder. This is the folder where the file will be saved on the server. It should start and end with a forward slash, such as /home/pi/pictures/"
+        android:dialogTitle="SSH Server storage folder"
+        android:title="SSH server storage folder"
+        />
+</PreferenceScreen>
